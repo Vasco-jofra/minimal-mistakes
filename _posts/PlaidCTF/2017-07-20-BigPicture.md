@@ -1,9 +1,13 @@
 ---
-title:  "PlaidCTF2 -- BigPicture Writeup"
+title: "PlaidCTF -- BigPicture Writeup"
 categories:
   - PlaidCTF
 tags:
   - CTF
+# If only it worked...
+# header:
+#   image: test_image.png
+#   teaser: test_image.png
 ---
 
 ## big picture (not solved during the CTF)

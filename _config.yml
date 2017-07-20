@@ -205,19 +205,16 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
+###### This does not work
+###### This does not work
+###### This does not work
 category_archive:
-  type: jekyll-archives
+  type: liquid # defaulf: liquid
   path: /categories/
 tag_archive:
-  type: jekyll-archives
+  type: liquid # defaulf: liquid
   path: /tags/
 
-jekyll-archives:
-  enabled: all
-  layout: archive-taxonomy
-  permalinks:
-    tag: '/tag/:name/'
-    category: '/category/:name/'
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
