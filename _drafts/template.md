@@ -1,24 +1,21 @@
 ---
-title: "<CTF_NAME> -- <CHALLENGE_NAME> Writeup"
+title: "CTF_NAME -- CHALLENGE_NAME Writeup"
 categories:
-  - <CTF_NAME>
+  - CTF_NAME
 tags:
   - CTF
-# - pwn
+#  - pwn
 ---
 
+> This_is_a_description
+
 <div class="notice--info">
-<strong>Challenge:</strong>
-<ul>
-<li></li>
-<li> <strong>Name</strong>:     <!--fill me--></li>
-<li> <strong>Category</strong>: <!--fill me--></li>
-<li> <strong>Points</strong>:   <!--fill me--></li>
-<li> <strong>Solves</strong>:   <!--fill me--></li>
-<li> <strong>Given</strong>:   <!--fill me--></li>
-</ul>
+<strong>Name</strong>: CTFNAME<br>
+<strong>Category</strong>: pwn<br>
+<strong>Points</strong>: 000<br>
+<strong>Solves</strong>: 000<br>
+<strong>Given</strong>: <code>SOMETHING1</code>, <code>SOMETHING2</code><br> <!-- Link the files here to my repository with it -->
 </div>
 
-> <!-- Description here -->
 
 # Solution
