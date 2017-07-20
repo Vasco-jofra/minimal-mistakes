@@ -4,26 +4,21 @@ categories:
   - PlaidCTF
 tags:
   - CTF
-# If only it worked...
-# header:
-#   image: test_image.png
-#   teaser: test_image.png
+  - pwn
 ---
 
-## big picture (not solved during the CTF)
+> Big picture
 
-**Category:** pwnable
-
-**Points:** 200
-
-**Solves:** 67
-
-**Given:** `bigpicture`, `bigpicture.c` and `libc-2.23.so`
+<div class="notice--info">
+<strong>Name</strong>: BigPicture<br>
+<strong>Category</strong>: pwn<br>
+<strong>Points</strong>: 200<br>
+<strong>Solves</strong>: 67<br>
+<strong>Given</strong>: <code>bigpicture</code>, <code>bigpicture.c</code>, <code>libc-2.23.so</code><br> <!-- Link the files here to my repository with it -->
+</div>
 
 
 # Solution sumary (solved after the CTF was finished):
-**By:** jofra
-
 Based my exploit on this writeup: [bigpicture write up](https://amritabi0s.wordpress.com/2017/04/24/plaid-ctf-2017-bigpicture-write-up)<br><br>
 Sumary:
 1. Find the `libc offset` in relation to our buffer

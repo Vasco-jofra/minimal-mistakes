@@ -10,7 +10,7 @@ tags:
 > This_is_a_description
 
 <div class="notice--info">
-<strong>Name</strong>: CTFNAME<br>
+<strong>Name</strong>: CHALLENGE_NAME<br>
 <strong>Category</strong>: pwn<br>
 <strong>Points</strong>: 000<br>
 <strong>Solves</strong>: 000<br>
