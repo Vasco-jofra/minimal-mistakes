@@ -19,3 +19,9 @@ tags:
 
 
 # Solution
+
+
+# Exploit
+```python
+
+```
