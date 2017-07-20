@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Vasco Franco"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A guy interested in computer science. From algorithms to distributed systems I'm interested in lots of subjects, but my love is low level security."
+  bio              : ""
   location         : "Lisbon, PT"
   email            :
   uri              :
