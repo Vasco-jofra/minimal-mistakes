@@ -11,12 +11,14 @@ tags:
 <strong>Challenge:</strong>
 <ul>
 <li></li>
-<li> Name:     <!--fill me--></li>
-<li> Category: <!--fill me--></li>
-<li> Points:   <!--fill me--></li>
-<li> Solves:   <!--fill me--></li>
-<li> Given:   <!--fill me--></li>
+<li> <strong>Name</strong>:     <!--fill me--></li>
+<li> <strong>Category</strong>: <!--fill me--></li>
+<li> <strong>Points</strong>:   <!--fill me--></li>
+<li> <strong>Solves</strong>:   <!--fill me--></li>
+<li> <strong>Given</strong>:   <!--fill me--></li>
 </ul>
 </div>
 
 > <!-- Description here -->
+
+# Solution
